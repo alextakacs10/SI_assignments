@@ -42,13 +42,13 @@ namespace CreateClass
         {
             get { return gender; }
             set {
-                if (Enum.IsDefined(typeof(Genders), gender))
+                if (Enum.IsDefined(typeof(Genders), value))
                 {
-                    Gender = value;
+                    gender = value;
                 }
                 else
                 {
-                    Gender = "Error";
+                    gender = "Error";
                 }; }
         }
 
