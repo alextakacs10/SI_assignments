@@ -19,6 +19,12 @@ namespace CreateClass
             Person unknown = new Person("Unknown", "1995.02.26", "Unknown");
             Console.WriteLine(unknown.ToString());
 
+            Room room1 = new Room(1);
+
+            Person tony = new Employee("Tony", "1995.02.12", "Male", 100, "Slave", room1);
+            Console.WriteLine(tony.ToString());
+
+
             Console.ReadKey();
         }
     }
