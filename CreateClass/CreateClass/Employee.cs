@@ -40,7 +40,10 @@ namespace CreateClass
 
         public override string ToString()
         {
-            return base.ToString() + ", Salary: " + Salary + ", Profession: " + Profession;
+            return base.ToString() +
+                ", Salary: " + Salary +
+                ", Profession: " + Profession +
+                ", Room: " + Room;
         }
     }
 }

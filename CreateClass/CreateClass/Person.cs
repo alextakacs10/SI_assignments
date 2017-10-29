@@ -54,7 +54,9 @@ namespace CreateClass
 
         public override string ToString()
         {
-            return "Name: " + Name + ", BirthDate: " + BirthDate + ", Gender: " + Gender;
+            return "Name: " + Name +
+                ", BirthDate: " + BirthDate +
+                ", Gender: " + Gender;
         }
     }
 }
