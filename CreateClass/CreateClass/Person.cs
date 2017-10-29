@@ -8,24 +8,48 @@ namespace CreateClass
 {
     class Person
     {
-        String Name;
-        String BirthDate;
-        public String Gender { get; set; }
+        private String name;
+        private String birthDate;
+        private String gender;
 
         enum Genders {Male, Female};
 
-        public Person(string name, String birthDate, string gender)
+        public Person()
+        {
+
+        }
+
+        public Person(string name, string birthDate, string gender)
         {
             Name = name;
             BirthDate = birthDate;
-            if (Enum.IsDefined(typeof(Genders), gender))
-            {
-                Gender = gender;
-            } else
-            {
-                Gender = "Error";
-            }
-            
+            Gender = gender;
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public string BirthDate
+        {
+            get { return birthDate; }
+            set { birthDate = value; }
+        }
+
+        public string Gender
+        {
+            get { return gender; }
+            set {
+                if (Enum.IsDefined(typeof(Genders), gender))
+                {
+                    Gender = value;
+                }
+                else
+                {
+                    Gender = "Error";
+                }; }
         }
 
         public override string ToString()
