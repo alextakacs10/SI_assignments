@@ -43,7 +43,7 @@ namespace CreateClass
             return base.ToString() +
                 ", Salary: " + Salary +
                 ", Profession: " + Profession +
-                ", Room: " + Room;
+                ", Room: " + Room.RoomNumber;
         }
     }
 }
