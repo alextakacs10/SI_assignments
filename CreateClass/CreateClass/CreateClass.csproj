@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICloneable.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Person.cs" />
