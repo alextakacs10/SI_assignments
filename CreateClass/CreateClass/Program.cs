@@ -10,18 +10,18 @@ namespace CreateClass
     {
         static void Main(string[] args)
         {
-            Person alex = new Person("Alex", "1995.02.26", "Male");
+            Person alex = new Person("Alex", "1995.02.26", Person.Genders.Male);
             Console.WriteLine(alex.ToString());
 
-            Person alexa = new Person("Alex", "1995.02.26", "Female");
+            Person alexa = new Person("Alex", "1995.02.26", Person.Genders.Male);
             Console.WriteLine(alexa.ToString());
 
-            Person unknown = new Person("Unknown", "1995.02.26", "Unknown");
+            Person unknown = new Person("Unknown", "1995.02.26", Person.Genders.Male);
             Console.WriteLine(unknown.ToString());
 
             Room room1 = new Room(1);
 
-            Employee tony = new Employee("Tony", "1995.02.12", "Male", 100, "Slave", room1);
+            Employee tony = new Employee("Tony", "1995.02.12", Person.Genders.Male, 100, "Slave", room1);
             tony.Room.RoomNumber = 1;
             Employee tonyClone = (Employee)tony.Clone();
             tonyClone.Room.RoomNumber = 7;

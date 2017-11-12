@@ -12,7 +12,7 @@ namespace CreateClass
         private string profession;
         private Room room;
 
-        public Employee(string Name, string BirthDate, string Gender, int salary, string profession, Room room)
+        public Employee(string Name, string BirthDate, Genders Gender, int salary, string profession, Room room)
             :base(Name, BirthDate, Gender)
         {
             Salary = salary;

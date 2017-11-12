@@ -10,16 +10,16 @@ namespace CreateClass
     {
         private String name;
         private String birthDate;
-        private String gender;
+        private Genders gender;
 
-        enum Genders {Male, Female};
+        public enum Genders {Male, Female};
 
         public Person()
         {
 
         }
 
-        public Person(string name, string birthDate, string gender)
+        public Person(string name, string birthDate, Genders gender)
         {
             Name = name;
             BirthDate = birthDate;
@@ -38,18 +38,10 @@ namespace CreateClass
             set { birthDate = value; }
         }
 
-        public string Gender
+        public Genders Gender
         {
             get { return gender; }
-            set {
-                if (Enum.IsDefined(typeof(Genders), value))
-                {
-                    gender = value;
-                }
-                else
-                {
-                    gender = "Error";
-                }; }
+            set { gender = value; }
         }
 
         public override string ToString()
