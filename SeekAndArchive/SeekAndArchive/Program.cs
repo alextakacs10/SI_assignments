@@ -23,25 +23,25 @@ namespace SeekAndArchive
                 Console.WriteLine("Directory does not exist.");
                 return;
             }
-
+             
             RecursiveSearch(FoundFiles, fileName, rootDir);
-            Console.WriteLine("Found {0} files in {1} with pattern {2}.", FoundFiles.Count, rootDir.FullName, fileName);
-
+            Console.WriteLine("File name or pattern to search for: {0}", fileName);
+            Console.WriteLine("Search in this directory: {0}", rootDir.FullName);
+            Console.WriteLine("\nPress any key to search.");
+            Console.ReadKey(true);
+            Console.WriteLine("\nFound {0} item(s).", FoundFiles.Count);
             foreach (FileInfo file in FoundFiles)
             {
                 Console.WriteLine("{0}", file.FullName);
             }
-            Console.ReadKey();
+            Console.WriteLine("Pres any key to exit.");
+            Console.ReadKey(true);
         }
 
         static void RecursiveSearch(List<FileInfo> foundFiles, string fileName, DirectoryInfo currentDirectory)
         {
             foreach (FileInfo file in currentDirectory.GetFiles(fileName))
             {
-                //if(file.Name == fileName)
-                //{
-                //    foundFiles.Add(file);
-                //}
                 foundFiles.Add(file);
             }
 
