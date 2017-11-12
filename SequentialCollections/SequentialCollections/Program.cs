@@ -22,6 +22,19 @@ namespace SequentialCollections
                 object obj = myQueue.Dequeue();
                 Console.WriteLine("Dequeued item: {0}", obj);
             }
+
+            Stack myStack = new Stack();
+            myStack.Push("First");
+            myStack.Push("Second");
+            myStack.Push("Third");
+            myStack.Push("Fourth");
+
+            while (myStack.Count > 0)
+            {
+                object obj = myStack.Pop();
+                Console.WriteLine("Popped item: {0}", obj);
+            }
+
             Console.ReadKey();
         }
     }
