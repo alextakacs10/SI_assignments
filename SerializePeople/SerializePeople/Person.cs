@@ -42,10 +42,10 @@ namespace SerializePeople
                 ", Gender: " + Gender;
         }
 
-        public void Serialize(string output)
+        public void Serialize(string fileName)
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream(output, FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, this);
             stream.Close();
         }
