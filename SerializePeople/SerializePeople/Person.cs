@@ -49,5 +49,16 @@ namespace SerializePeople
             formatter.Serialize(stream, this);
             stream.Close();
         }
+
+        public static Person Deserialize(string fileName)
+        {
+            Person person;
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream(fileName, FileMode.Open);
+            person = (Person) formatter.Deserialize(stream);
+            stream.Close();
+            return person;
+
+        }
     }
 }

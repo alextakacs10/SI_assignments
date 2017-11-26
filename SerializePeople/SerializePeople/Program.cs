@@ -12,6 +12,7 @@ namespace SerializePeople
         {
             Person alex = new Person("Alex", new DateTime(1995, 2, 26), Person.Genders.Male);
             alex.Serialize(@"C:\TEST\myfile.bin");
+            Person.Deserialize(@"C\TEST\myfile.bin");
         }
     }
 }
