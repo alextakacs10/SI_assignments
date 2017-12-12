@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializePeople", "SerializePeople\SerializePeople.csproj", "{43CDD1CD-1D39-4DBB-978E-551E61DBD353}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43CDD1CD-1D39-4DBB-978E-551E61DBD353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43CDD1CD-1D39-4DBB-978E-551E61DBD353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43CDD1CD-1D39-4DBB-978E-551E61DBD353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43CDD1CD-1D39-4DBB-978E-551E61DBD353}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02A98C61-C7AD-4BA1-A028-AF3D79310BA6}
+	EndGlobalSection
+EndGlobal

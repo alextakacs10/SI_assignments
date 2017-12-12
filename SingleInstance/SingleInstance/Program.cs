@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+
+namespace SingleInstance
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Mutex mutex = null;
+            const string mutexName = "RUNMEONLYONCE";
+            while (true)
+            {
+                try
+                {
+                    mutex = Mutex.OpenExisting(mutexName);
+                    Console.WriteLine("Mutex found...");
+                    mutex.Close();
+                    break;
+                } catch (WaitHandleCannotBeOpenedException)
+                {
+                    bool mutexIsMine = true;
+                    mutex = new Mutex(mutexIsMine , mutexName);
+                    Console.WriteLine("Mutex created.");
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
